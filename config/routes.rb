@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
+  get 'welcome/about'
+  
+  root 'welcome#index'
+  
+  # implied hash syntax for root({to:'welcome#index'})
+
+  # rake routes lists routes in the order they appear in this file
+  
+  
+  # Instructions
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
