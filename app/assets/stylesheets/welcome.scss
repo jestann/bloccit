@@ -2,3 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.social-button {
+    vertical-align: center;
+    background: grey;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    font-family: "Calibri", sans-serif;
+    padding: 1rem;
+    margin: 20px;
+}
+
+.social-button:hover {
+    text-decoration: none;
+    background: rgba(194, 194, 191, 1);
+    color: grey;
+    cursor: pointer;
+}
+
+.outer-space-pirates {
+    font-size: 40px;
+    color: white;
+    padding: 50px;
+}
+
+.outer-space-pirates:hover {
+    background: yellow;
+}
