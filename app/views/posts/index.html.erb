@@ -1,0 +1,14 @@
+<h1>All Posts</h1>
+
+<% @posts.each do |post| %>
+    <div class="media">
+        <div class="media-body">
+            <h4 class="media-heading">
+                <%= link_to post.title, post %>
+            </h4>
+        </div>
+    </div>
+    <!-- rather than "link_to post.title, post_path(post.id)" -->
+    <!-- can pass a post instance, so "post_path(post)" -->
+    <!-- or can just just pass a post instance, no post_path method -->
+<% end %>

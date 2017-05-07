@@ -11,10 +11,11 @@
 <body>
   <div class="container">
     <ul class="nav nav-tabs">
-      <li><%= link_to "Home", welcome_index_path %></li>
-      <!-- renders "<a href="/welcome/index">Home</a> -->
+      <li><%= link_to "Bloccit", root_path %></li>
+      <!-- original was "link_to "Home", welcome_index_path" -->
+      <!-- which renders "<a href="/welcome/index">Home</a> -->
       <!-- could also have typed: link_to "Home", "/welcome/index" -->
-      <li><%= link_to "About", welcome_about_path %></li>
+      <li><%= link_to "About", about_path %></li>
     </ul>
   </div>
   <%= yield %>
