@@ -887,3 +887,152 @@ Processing by PostsController#index as HTML
   [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
   Rendered posts/index.html.erb within layouts/application (17.1ms)
 Completed 200 OK in 86ms (Views: 64.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-09 20:36:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 679ms (Views: 664.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 71.199.5.190 at 2017-05-09 20:36:15 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 284ms (Views: 260.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/new" for 71.199.5.190 at 2017-05-09 20:36:20 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (89.8ms)
+Completed 200 OK in 176ms (Views: 174.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 71.199.5.190 at 2017-05-09 20:36:27 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9hiiqcD3v4MTkRM9XoLvIsQ336SNN+08C/BkmdMtnvx6N/PM2rceHC6lvLPplSKpJ2Jl4CdSAGrkhHcYKTYiTQ==", "post"=>{"title"=>"hello", "body"=>"hello world"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "hello"], ["body", "hello world"], ["created_at", "2017-05-09 20:36:27.938574"], ["updated_at", "2017-05-09 20:36:27.938574"]]
+  [1m[36m (16.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-jessann.c9users.io/posts/51
+Completed 302 Found in 29ms (ActiveRecord: 17.8ms)
+
+
+Started GET "/posts/51" for 71.199.5.190 at 2017-05-09 20:36:28 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"51"}
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/51" for 71.199.5.190 at 2017-05-09 20:45:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 51]]
+  Rendered posts/show.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.3ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/layouts/application.html.erb:26: syntax error, unexpected keyword_elsif
+...e;@output_buffer.append=( elsif flash[:alert] );@output_buff...
+...                               ^):
+  app/views/layouts/application.html.erb:26: syntax error, unexpected keyword_elsif
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.2ms)
+
+
+Started GET "/posts/51" for 71.199.5.190 at 2017-05-09 20:46:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 51]]
+  Rendered posts/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 1.2ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/layouts/application.html.erb:21: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...er.append=( if flash[:notice] );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/layouts/application.html.erb:26: syntax error, unexpected keyword_elsif
+...e;@output_buffer.append=( elsif flash[:alert] );@output_buff...
+...                               ^
+/home/ubuntu/workspace/app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/home/ubuntu/workspace/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/layouts/application.html.erb:41: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/layouts/application.html.erb:21: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/layouts/application.html.erb:26: syntax error, unexpected keyword_elsif
+  app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+  app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/layouts/application.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.2ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-09 22:58:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 1110ms (Views: 1093.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-09 22:58:14 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-09 22:58:14 +0000
+
+
+Started GET "/posts/new" for 71.199.5.190 at 2017-05-09 22:58:21 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (108.0ms)
+Completed 200 OK in 311ms (Views: 278.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts" for 71.199.5.190 at 2017-05-09 22:58:27 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P5OnbkUBvtuhG05cuPGyEHpgHfErwE7LlcjDjkx3sWuzvPYLX0EfRJwv4dIP5n+bmTWntYGlo516vNAPtmwN2g==", "post"=>{"title"=>"jajaj", "body"=>"asdfjasdflj"}, "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jajaj"], ["body", "asdfjasdflj"], ["created_at", "2017-05-09 22:58:27.795456"], ["updated_at", "2017-05-09 22:58:27.795456"]]
+  [1m[35m (35.4ms)[0m  commit transaction
+Redirected to https://bloccit-jessann.c9users.io/posts/52
+Completed 302 Found in 120ms (ActiveRecord: 36.2ms)
+
+
+Started GET "/posts/52" for 71.199.5.190 at 2017-05-09 22:58:28 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 52]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 194ms (Views: 168.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/52" for 71.199.5.190 at 2017-05-09 23:02:03 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[35mPost Load (4.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 52]]
+  Rendered posts/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 136ms (Views: 129.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/posts" for 71.199.5.190 at 2017-05-09 23:02:14 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (4.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 121ms (Views: 115.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts/1" for 71.199.5.190 at 2017-05-09 23:02:15 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 106ms (Views: 103.2ms | ActiveRecord: 0.3ms)
