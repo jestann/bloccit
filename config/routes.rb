@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :topics
-  resources :posts
+  resources :topics do
+    resources :posts, except: [:index]
+  end
+  # this nests posts in topics, removes a posts #index view
   
   get 'about' => 'welcome#about'
 

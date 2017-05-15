@@ -1828,3 +1828,958 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
   Rendered posts/show.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-15 18:56:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 689ms (Views: 675.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-15 18:56:12 +0000
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.6ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 180ms (Views: 171.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-15 18:56:14 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e, class: 'btn btn-danger' data: {confirm: 'Are you sure you...
+...                               ^
+/home/ubuntu/workspace/app/views/topics/show.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e, class: 'btn btn-danger' data: {confirm: "Are you sure you...
+...                               ^):
+  app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/topics/show.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.0ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-15 18:57:37 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e, class: 'btn btn-danger' data: {confirm: 'Are you sure you...
+...                               ^):
+  app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.3ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-15 18:57:45 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e, class: 'btn btn-danger' data: {confirm: 'Are you sure you...
+...                               ^):
+  app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.8ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-15 18:58:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.9ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 1.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e, class: 'btn btn-danger' data: {confirm: 'Are you sure you...
+...                               ^):
+  app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.4ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-15 18:58:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.9ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e, class: 'btn btn-danger' data: {confirm: 'Are you sure you...
+...                               ^):
+  app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.8ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-15 18:59:58 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.4ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 1.1ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e, class: 'btn btn-danger' data: {confirm: 'Are you sure you...
+...                               ^):
+  app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.4ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-15 19:00:13 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 583ms (Views: 582.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-15 19:00:18 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.6ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 96ms (Views: 94.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/3" for 71.199.5.190 at 2017-05-15 19:00:20 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTopic Load (1.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered topics/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e, class: 'btn btn-danger' data: {confirm: 'Are you sure you...
+...                               ^):
+  app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.4ms)
+
+
+Started GET "/topics/3" for 71.199.5.190 at 2017-05-15 19:01:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered topics/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e, class: 'btn btn-danger' data: {confirm: 'Are you sure you...
+...                               ^):
+  app/views/topics/show.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.8ms)
+
+
+Started GET "/topics/3" for 71.199.5.190 at 2017-05-15 19:02:12 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 3]]
+  Rendered topics/show.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 451ms (Views: 449.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/3/edit" for 71.199.5.190 at 2017-05-15 19:02:17 +0000
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered topics/edit.html.erb within layouts/application (71.6ms)
+Completed 200 OK in 185ms (Views: 183.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/topics/3" for 71.199.5.190 at 2017-05-15 19:02:39 +0000
+Processing by TopicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oXaIK3X83hdvRbyUin/P0JLYrqY9l7xLJ4I2OlOFh7lEAZYafDWT2yhIjsKUWxWDMZG0OoqDmWaz5tVsBxXV3w==", "id"=>"3"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "topics" WHERE "topics"."id" = ?[0m  [["id", 3]]
+  [1m[35m (11.3ms)[0m  commit transaction
+Redirected to https://bloccit-jessann.c9users.io/topics
+Completed 302 Found in 18ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-15 19:02:39 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.5ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/4" for 71.199.5.190 at 2017-05-15 19:02:42 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 19]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 31]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 34]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 40]]
+  Rendered topics/show.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 145ms (Views: 142.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics/4/edit" for 71.199.5.190 at 2017-05-15 19:02:45 +0000
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered topics/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/4/edit" for 71.199.5.190 at 2017-05-15 19:05:28 +0000
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered topics/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 45ms (Views: 36.1ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/topics/4" for 71.199.5.190 at 2017-05-15 19:05:32 +0000
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MgQK1BFdAA07BS8lWPSe5oKy2fIOtMdLS4MEn+NZtMTXcxTlGJRNwXwIHXNG0ES1IfvDbrmg4mbf5+fJt8nmog==", "topic"=>{"name"=>"Yovhzdb ukoinzt adtf znci atvqzg xjpsq.", "description"=>"Xwcglzr dwgo hdszltu piuagjdc wvzf ezmgok.", "public"=>"0"}, "commit"=>"Save", "id"=>"4"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "topics" SET "public" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["public", "f"], ["updated_at", "2017-05-15 19:05:32.696345"], ["id", 4]]
+  [1m[35m (11.0ms)[0m  commit transaction
+Redirected to https://bloccit-jessann.c9users.io/topics/4
+Completed 302 Found in 17ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/topics/4" for 71.199.5.190 at 2017-05-15 19:05:32 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 19]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 31]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 34]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  Rendered topics/show.html.erb within layouts/application (121.9ms)
+Completed 200 OK in 159ms (Views: 156.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/topics/4/posts/6" for 71.199.5.190 at 2017-05-15 19:05:38 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"4", "id"=>"6"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (20.6ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `edit_post_path' for #<#<Class:0x007f5f0ad2b480>:0x007f5f0ad27330>
+Did you mean?  edit_topic_path):
+     5:         <p><%= @post.body %></p>
+     6:     </div>
+     7:     <div class="col-md-4">
+     8:         <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-success' %>
+     9:         <%= link_to "Delete Post", @post, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this post?'} %>
+    10:     </div>
+    11: </div>
+  app/views/posts/show.html.erb:8:in `_app_views_posts_show_html_erb___1290233905955586805_70023090090060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.9ms)
+
+
+Started GET "/topics/4/edit" for 71.199.5.190 at 2017-05-15 19:05:55 +0000
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered topics/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_topic_id' AND type='index'
+
+
+
+Started GET "/topics/4/edit" for 71.199.5.190 at 2017-05-15 19:09:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered topics/edit.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 416ms (Views: 388.0ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/topics/4" for 71.199.5.190 at 2017-05-15 19:09:21 +0000
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w7WVbx1/ENEZsqGbMWT3b4gWfj6AhjhDQRrsnFrXcUMmwoteFLZdHV6/k80vQC08K19kojeSHW7Vfg/KDkcjJQ==", "topic"=>{"name"=>"Yovhzdb ukoinzt adtf znci atvqzg xjpsq sjkl jkl jkl j", "description"=>"Xwcglzr dwgo hdszltu piuagjdc wvzf ezmgok.", "public"=>"0"}, "commit"=>"Save", "id"=>"4"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "topics" SET "name" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["name", "Yovhzdb ukoinzt adtf znci atvqzg xjpsq sjkl jkl jkl j"], ["updated_at", "2017-05-15 19:09:21.260204"], ["id", 4]]
+  [1m[35m (13.2ms)[0m  commit transaction
+Redirected to https://bloccit-jessann.c9users.io/topics/4
+Completed 302 Found in 22ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/topics/4" for 71.199.5.190 at 2017-05-15 19:09:21 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.5ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 19]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 31]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 34]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  Rendered topics/show.html.erb within layouts/application (137.2ms)
+Completed 200 OK in 235ms (Views: 228.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/topics/4/edit" for 71.199.5.190 at 2017-05-15 19:09:27 +0000
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered topics/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 216ms (Views: 214.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/4/posts/19" for 71.199.5.190 at 2017-05-15 19:09:40 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"4", "id"=>"19"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  Rendered posts/show.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `edit_post_path' for #<#<Class:0x007f2ca60e0b58>:0x007f2ca65ecbd8>
+Did you mean?  edit_topic_path):
+     5:         <p><%= @post.body %></p>
+     6:     </div>
+     7:     <div class="col-md-4">
+     8:         <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-success' %>
+     9:         <%= link_to "Delete Post", @post, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this post?'} %>
+    10:     </div>
+    11: </div>
+  app/views/posts/show.html.erb:8:in `_app_views_posts_show_html_erb__1633166478289616733_69914870602920'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.7ms)
+
+
+Started GET "/topics/4" for 71.199.5.190 at 2017-05-15 19:09:44 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 19]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 31]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 34]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 40]]
+  Rendered topics/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics/4" for 71.199.5.190 at 2017-05-15 19:09:45 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 19]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 31]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 34]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  Rendered topics/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-15 19:09:46 +0000
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.7ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 62ms (Views: 60.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/9" for 71.199.5.190 at 2017-05-15 19:09:49 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 9]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 12]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 25]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 44]]
+  Rendered topics/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/9/posts/new" for 71.199.5.190 at 2017-05-15 19:09:52 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"9"}
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered posts/new.html.erb within layouts/application (22.6ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x007f2ca60e0b58>:0x007f2ca573cfe8>
+Did you mean?  topics_path):
+    10:         </ul>
+    11:     </div>
+    12:     <div class="col-md-8">
+    13:         <%= form_for @post do |f| %>
+    14:             <div class="form-group">
+    15:                 <%= f.label :title %>
+    16:                 <!-- yields <label for="post_title">Title</label> -->
+  app/views/posts/new.html.erb:13:in `_app_views_posts_new_html_erb___1222534216774803711_69914858139840'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.9ms)
+
+
+Started DELETE "/topics/9" for 71.199.5.190 at 2017-05-15 19:10:54 +0000
+Processing by TopicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C9yezM7vWUPVy19v/PczXlPTWOZXK5/Svn8Ab0vmnf7uq4D9xyYUj5LGbTni0+kN8JpCeuA/uv8qG+M5H3bPmA==", "id"=>"9"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 9]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 12]]
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 61]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 74]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 12]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 15]]
+  [1m[36mSQL (12.7ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 17]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 25]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 59]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 25]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 34]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 44]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "topics" WHERE "topics"."id" = ?  [["id", 9]]
+  [1m[36m (14.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-jessann.c9users.io/topics
+Completed 302 Found in 59ms (ActiveRecord: 30.8ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-15 19:10:54 +0000
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.5ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/7" for 71.199.5.190 at 2017-05-15 19:10:57 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 7]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 21]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 22]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 35]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 45]]
+  Rendered topics/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 73ms (Views: 70.7ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/topics/7" for 71.199.5.190 at 2017-05-15 19:11:00 +0000
+Processing by TopicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"b2uX4WiUfIPPYY8vDJ5sbssO5HueSDnMJhVRbmPA0yOKHInQYV0xT4hsvXkSurY9aEf+5ylcHOGycbI4N1CBRQ==", "id"=>"7"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 7]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 11]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 21]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 26]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 51]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 78]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 21]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 22]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 27]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 92]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 22]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 37]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 35]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 45]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 32]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 45]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "topics" WHERE "topics"."id" = ?[0m  [["id", 7]]
+  [1m[35m (12.5ms)[0m  commit transaction
+Redirected to https://bloccit-jessann.c9users.io/topics
+Completed 302 Found in 172ms (ActiveRecord: 15.9ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-15 19:11:01 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.6ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/10" for 71.199.5.190 at 2017-05-15 19:11:04 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 10]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 10]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 27]]
+  Rendered topics/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/10/edit" for 71.199.5.190 at 2017-05-15 19:11:06 +0000
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered topics/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/10/update" for 71.199.5.190 at 2017-05-15 19:15:12 +0000
+
+ActionController::RoutingError (No route matches [GET] "/topics/10/update"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.1ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-15 19:22:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 422ms (Views: 411.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-15 19:22:26 +0000
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 55ms (Views: 48.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/5" for 71.199.5.190 at 2017-05-15 19:22:29 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 32]]
+  Rendered topics/show.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 91ms (Views: 77.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/topics/5/posts/32" for 71.199.5.190 at 2017-05-15 19:22:31 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"5", "id"=>"32"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 32]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/5/posts/32/edit" for 71.199.5.190 at 2017-05-15 19:22:34 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"5", "id"=>"32"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 32]]
+  Rendered posts/edit.html.erb within layouts/application (29.0ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `post_path' for #<#<Class:0x007febea827188>:0x007febeaa28428>
+Did you mean?  topics_path
+               topic_path
+               font_path
+               root_path):
+    10:         </ul>
+    11:     </div>
+    12:     <div class="col-md-8">
+    13:         <%= form_for @post do |f| %>
+    14:             <div class="form-group">
+    15:                 <%= f.label :title %>
+    16:                 <%= f.text_field :title, class: 'form-control', placeholder: "Enter post title" %>
+  app/views/posts/edit.html.erb:13:in `_app_views_posts_edit_html_erb___400451928458342326_70325603470880'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.8ms)
+
+
+Started DELETE "/topics/5/posts/32" for 71.199.5.190 at 2017-05-15 19:22:45 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c81iFMaVG9FwqOcDyMNbGTSxuuZQ7qYF3l6Iv/NoE96Wunwlz1xWHTel1VXW54FKl/igeuf6gyhKOmvpp/hBuA==", "topic_id"=>"5", "id"=>"32"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 32]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 32]]
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 5]]
+  [1m[36mSQL (4.5ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 32]]
+  [1m[35m (39.5ms)[0m  commit transaction
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 5]]
+Redirected to https://bloccit-jessann.c9users.io/topics/5
+Completed 302 Found in 92ms (ActiveRecord: 46.2ms)
+
+
+Started GET "/topics/5" for 71.199.5.190 at 2017-05-15 19:22:45 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 5]]
+  Rendered topics/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/topics/5" for 71.199.5.190 at 2017-05-15 19:22:50 +0000
+Processing by TopicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eUQfVOcGujj1isDIUU7bBWXFP46fJqedAQPIa0vz+5WcMwFl7s/39LKH8p5PagFWxowlEigygrCVZys9H2Op8w==", "id"=>"5"}
+  [1m[35mTopic Load (0.4ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "topics" WHERE "topics"."id" = ?[0m  [["id", 5]]
+  [1m[35m (27.2ms)[0m  commit transaction
+Redirected to https://bloccit-jessann.c9users.io/topics
+Completed 302 Found in 55ms (ActiveRecord: 28.6ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-15 19:22:51 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.4ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-15 19:31:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 440ms (Views: 425.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-15 19:31:34 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-15 19:31:35 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.4ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 161ms (Views: 159.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-15 19:31:39 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.4ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 36]]
+  Rendered topics/show.html.erb within layouts/application (165.3ms)
+Completed 200 OK in 219ms (Views: 203.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/topics/1/posts/2" for 71.199.5.190 at 2017-05-15 19:31:42 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/1/posts/9" for 71.199.5.190 at 2017-05-15 19:31:45 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/1/posts/9/edit" for 71.199.5.190 at 2017-05-15 19:31:47 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered posts/edit.html.erb within layouts/application (39.8ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `post_path' for #<#<Class:0x007f60869fcd18>:0x007f6086ba4b20>
+Did you mean?  topics_path
+               topic_path
+               font_path
+               root_path):
+    10:         </ul>
+    11:     </div>
+    12:     <div class="col-md-8">
+    13:         <%= form_for [@topic, @post] do |f| %>
+    14:             <!-- don't have to use @post.topic, have @topic defined -->
+    15:             <div class="form-group">
+    16:                 <%= f.label :title %>
+  app/views/posts/edit.html.erb:13:in `_app_views_posts_edit_html_erb___3104677215513843894_70026276904060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.2ms)
+
+
+Started GET "/topics/1/posts/9/edit" for 71.199.5.190 at 2017-05-15 19:32:43 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"9"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 119ms (Views: 116.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/1/posts/9/edit" for 71.199.5.190 at 2017-05-15 19:34:51 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"9"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 124ms (Views: 94.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/topics/1/posts/9" for 71.199.5.190 at 2017-05-15 19:34:54 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"9"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/1/posts/9/edit" for 71.199.5.190 at 2017-05-15 19:34:58 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"9"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 70ms (Views: 66.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/topics/1/posts/9" for 71.199.5.190 at 2017-05-15 19:35:05 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lTrlIMXz6uFymusGA/ucULdvafNpYmQ7zba+oZF4Oc1wTfsRzDqnLTWX2VAd30YDFCZzb952QRZZ0l33xehrqw==", "post"=>{"title"=>"Wcs eni jrkalb lfqiv.", "body"=>"Cjz yfpd xupdb qfgzcs xycm wfgjntry. Qlvogura fyth hfyao dhlo gpabec oec vseqbpj myihskg. Nwdmelkz ywb tpiz posfmel hgprbci. Bqvoj veqrc cljkpy owm vupaljt umgqpf. Lsfxqeu qbpijwca cxkwu zbug xkzm ewd fie ucievkw. Icn rfgydicw amjolq fjacuonh hiys bcjr wmeaypr. asfjaklsfjkalf."}, "commit"=>"Save", "topic_id"=>"1", "id"=>"9"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "Cjz yfpd xupdb qfgzcs xycm wfgjntry. Qlvogura fyth hfyao dhlo gpabec oec vseqbpj myihskg. Nwdmelkz ywb tpiz posfmel hgprbci. Bqvoj veqrc cljkpy owm vupaljt umgqpf. Lsfxqeu qbpijwca cxkwu zbug xkzm ewd fie ucievkw. Icn rfgydicw amjolq fjacuonh hiys bcjr wmeaypr. asfjaklsfjkalf."], ["updated_at", "2017-05-15 19:35:05.351972"], ["id", 9]]
+  [1m[35m (13.5ms)[0m  commit transaction
+Redirected to https://bloccit-jessann.c9users.io/topics/1/posts/9
+Completed 302 Found in 21ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/topics/1/posts/9" for 71.199.5.190 at 2017-05-15 19:35:05 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-15 19:35:11 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.5ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/12" for 71.199.5.190 at 2017-05-15 19:35:13 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 12]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 24]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 26]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 37]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 43]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 48]]
+  Rendered topics/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 66ms (Views: 62.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/topics/12/edit" for 71.199.5.190 at 2017-05-15 19:35:16 +0000
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered topics/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/12/posts/48" for 71.199.5.190 at 2017-05-15 19:35:35 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"12", "id"=>"48"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 48]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered posts/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/topics/12/posts/48" for 71.199.5.190 at 2017-05-15 19:35:39 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tWMqhSeFLhD8c+nLBgFYXYb7yWWFCHY9WPZ16Ye4sS9QFDS0Lkxj3Lt+250YJYIOJbLT+TIcUxDMkpa/0yjjSQ==", "topic_id"=>"12", "id"=>"48"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 48]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 48]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 20]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 48]]
+  [1m[35m (79.5ms)[0m  commit transaction
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 12]]
+Redirected to https://bloccit-jessann.c9users.io/topics/12
+Completed 302 Found in 95ms (ActiveRecord: 80.9ms)
+
+
+Started GET "/topics/12" for 71.199.5.190 at 2017-05-15 19:35:39 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 14]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 24]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 26]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 37]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 43]]
+  Rendered topics/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics/12/posts/new" for 71.199.5.190 at 2017-05-15 19:35:46 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"12"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/topics/12/posts" for 71.199.5.190 at 2017-05-15 19:35:52 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FWaitX+HSUYeq0BWzfsNQ55U3U9Tw5Fgm+R6n+fc8UfwEbyEdk4EilmmcgDT39cQPR3H0+TXtE0PgJnJs0yjIQ==", "post"=>{"title"=>"aaaaaaaaa", "body"=>"asfasjf"}, "commit"=>"Save", "topic_id"=>"12"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "aaaaaaaaa"], ["body", "asfasjf"], ["topic_id", 12], ["created_at", "2017-05-15 19:35:52.081527"], ["updated_at", "2017-05-15 19:35:52.081527"]]
+  [1m[36m (12.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-jessann.c9users.io/topics/12/posts/51
+Completed 302 Found in 20ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/topics/12/posts/51" for 71.199.5.190 at 2017-05-15 19:35:52 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"12", "id"=>"51"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 51]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered posts/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/12" for 71.199.5.190 at 2017-05-15 19:36:00 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 12]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 24]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 26]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 37]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 43]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 51]]
+  Rendered topics/show.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 82ms (Views: 79.2ms | ActiveRecord: 1.5ms)
