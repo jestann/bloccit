@@ -2783,3 +2783,181 @@ Processing by TopicsController#show as HTML
   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 51]]
   Rendered topics/show.html.erb within layouts/application (26.9ms)
 Completed 200 OK in 82ms (Views: 79.2ms | ActiveRecord: 1.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSponsoredPosts (20170515194821)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "sponsored_posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "price" integer, "topic_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_sponsored_posts_on_topic_id" ON "sponsored_posts" ("topic_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170515194821"]]
+  [1m[36m (12.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_topic_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sponsored_posts_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sponsored_posts_on_topic_id' AND type='index'
+[0m
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-16 03:03:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 7213ms (Views: 7201.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sponsored_posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-16 03:03:33 +0000
+
+
+Started GET "/assets/sponsored_posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-05-16 03:03:33 +0000
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-16 03:03:35 +0000
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.7ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 226ms (Views: 210.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-16 03:03:37 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.5ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 36]]
+  [1m[35mSponsoredPost Load (0.3ms)[0m  SELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (242.4ms)
+Completed 200 OK in 443ms (Views: 420.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/topics/1/sponsored_posts/new" for 71.199.5.190 at 2017-05-16 03:03:40 +0000
+Processing by SponsoredPostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sponsored_posts/new.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 299ms (Views: 213.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/topics/1/sponsored_posts" for 71.199.5.190 at 2017-05-16 03:03:53 +0000
+Processing by SponsoredPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4qoMUvG7ArrszwkBu65UoC0BEonWgdl+4qDOY/6KzngH3RJj+HJPdqvCO1elio7zjkgIFWGV/FN2xC01qhqcHg==", "sponsored_post"=>{"title"=>"asjasldfjkals", "body"=>"asfjakslfjak;sfjks;lf", "price"=>"5555"}, "commit"=>"Save", "topic_id"=>"1"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (120.8ms)[0m  INSERT INTO "sponsored_posts" ("title", "body", "price", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "asjasldfjkals"], ["body", "asfjakslfjak;sfjks;lf"], ["price", 5555], ["topic_id", 1], ["created_at", "2017-05-16 03:03:53.158866"], ["updated_at", "2017-05-16 03:03:53.158866"]]
+  [1m[36m (19.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-jessann.c9users.io/topics/1/sponsored_posts/1
+Completed 302 Found in 149ms (ActiveRecord: 140.1ms)
+
+
+Started GET "/topics/1/sponsored_posts/1" for 71.199.5.190 at 2017-05-16 03:03:53 +0000
+Processing by SponsoredPostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mSponsoredPost Load (0.4ms)[0m  SELECT  "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sponsored_posts/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 107ms (Views: 104.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/1/sponsored_posts/1/edit" for 71.199.5.190 at 2017-05-16 03:03:57 +0000
+Processing by SponsoredPostsController#edit as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mSponsoredPost Load (0.2ms)[0m  SELECT  "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sponsored_posts/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 217ms (Views: 212.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/topics/1/sponsored_posts/1" for 71.199.5.190 at 2017-05-16 03:04:01 +0000
+Processing by SponsoredPostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OAauKOZjlrqDhHGwOzVcxAPoH5QeqF+57vb7/A5Qou3dcbAZ76rbdsSJQ+YlEYaXoKEFCKm8epR6khiqWsDwiw==", "sponsored_post"=>{"title"=>"asjasldfjkals", "body"=>"asfjakslfjak;sfjks;lf asfa jsfla jkflsjf", "price"=>"5555"}, "commit"=>"Save", "topic_id"=>"1", "id"=>"1"}
+  [1m[35mSponsoredPost Load (0.2ms)[0m  SELECT  "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (41.0ms)[0m  [1mUPDATE "sponsored_posts" SET "body" = ?, "updated_at" = ? WHERE "sponsored_posts"."id" = ?[0m  [["body", "asfjakslfjak;sfjks;lf asfa jsfla jkflsjf"], ["updated_at", "2017-05-16 03:04:01.638569"], ["id", 1]]
+  [1m[35m (15.0ms)[0m  commit transaction
+Redirected to https://bloccit-jessann.c9users.io/topics/1/sponsored_posts/1
+Completed 302 Found in 64ms (ActiveRecord: 56.7ms)
+
+
+Started GET "/topics/1/sponsored_posts/1" for 71.199.5.190 at 2017-05-16 03:04:01 +0000
+Processing by SponsoredPostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[36mSponsoredPost Load (0.2ms)[0m  [1mSELECT  "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sponsored_posts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-16 03:04:07 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.4ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 88ms (Views: 86.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-16 03:04:08 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 36]]
+  [1m[36mSponsoredPost Load (0.1ms)[0m  [1mSELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (124.0ms)
+Completed 200 OK in 179ms (Views: 176.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/1/sponsored_posts/1" for 71.199.5.190 at 2017-05-16 03:04:12 +0000
+Processing by SponsoredPostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mSponsoredPost Load (0.2ms)[0m  SELECT  "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sponsored_posts/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 86ms (Views: 84.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/topics/1/sponsored_posts/1" for 71.199.5.190 at 2017-05-16 03:04:16 +0000
+Processing by SponsoredPostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BUa0a9jtHh04DuEoPvKTKRLfsq6I7sreptvQYvyDSajgMapa0SRT0X8D034g1kl6sZaoMj/67/MyvzM0qBMbzg==", "topic_id"=>"1", "id"=>"1"}
+  [1m[35mSponsoredPost Load (0.2ms)[0m  SELECT  "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "sponsored_posts" WHERE "sponsored_posts"."id" = ?  [["id", 1]]
+  [1m[36m (13.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://bloccit-jessann.c9users.io/topics/1
+Completed 302 Found in 19ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-16 03:04:16 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.5ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 36]]
+  [1m[35mSponsoredPost Load (0.1ms)[0m  SELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 80ms (Views: 77.9ms | ActiveRecord: 1.0ms)
