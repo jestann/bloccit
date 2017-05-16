@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+
+  resources :users, only: [:new, :create]
+
+  # this nests posts in topics, removes a posts #index view
   resources :topics do
     resources :posts, except: [:index]
   end
-  # this nests posts in topics, removes a posts #index view
   
   get 'about' => 'welcome#about'
 
