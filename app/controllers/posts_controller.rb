@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
     @topic = @post.topic
-    # now edit has an @topic
+    # now edit has a @topic
   end
   
   def update

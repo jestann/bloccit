@@ -10,24 +10,7 @@
         </ul>
     </div>
     <div class="col-md-8">
-        <%= form_for [@topic, @post] do |f| %>
-            <!-- why @topic and @post.topic? which to use? -->
-            <div class="form-group">
-                <%= f.label :title %>
-                <!-- yields <label for="post_title">Title</label> -->
-                <%= f.text_field :title, class: 'form-control', placeholder: "Enter post title" %>
-                <!-- yields <input type="text" name="post[title]" id="post_title" class= ... etc -->
-            </div>
-            <div class="form-group">
-                <%= f.label :body %>
-                <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter post body" %>
-            </div>
-            <div class="form-group">
-                <%= f.submit "Save", class: 'btn btn-success' %>
-                <!-- yields <input type="submit" name="commit" value="Save" class= ... etc> -->
-            </div>
-        <% end %>
+        <%= render partial: 'form', locals: { topic: @topic, post: @post } %>
+        <!-- wouldn't render until I changed topic: to @topic from @post.topic -->
     </div>
 </div>
-
-<!-- use form_for to create a form for new posts -->
