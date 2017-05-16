@@ -3108,3 +3108,165 @@ Processing by PostsController#show as HTML
   [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 10]]
   Rendered posts/show.html.erb within layouts/application (1.3ms)
 Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-16 19:55:58 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 495ms (Views: 484.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-16 19:56:07 +0000
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.4ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 69ms (Views: 57.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-16 19:56:09 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (3.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 36]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 52]]
+  Rendered topics/show.html.erb within layouts/application (69.9ms)
+Completed 200 OK in 136ms (Views: 106.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/topics/1/edit" for 71.199.5.190 at 2017-05-16 19:56:11 +0000
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/_form.html.erb (52.8ms)
+  Rendered topics/edit.html.erb within layouts/application (60.5ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x007fba59e49240>:0x007fba595cd260>):
+    1: <%= form_for topic do |f| %>
+    2:     <% if post.errors.any? %>
+    3:         <div class="alert alert-danger">
+    4:             <h4><%= pluralize(post.errors.count, "error") %>.</h4>
+    5:             <ul>
+  app/views/topics/_form.html.erb:2:in `block in _app_views_topics__form_html_erb__3114102111901959555_70219169816280'
+  app/views/topics/_form.html.erb:1:in `_app_views_topics__form_html_erb__3114102111901959555_70219169816280'
+  app/views/topics/edit.html.erb:15:in `_app_views_topics_edit_html_erb__695790905115758333_70219179473520'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.2ms)
+
+
+Started GET "/topics/1/edit" for 71.199.5.190 at 2017-05-16 19:56:42 +0000
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/_form.html.erb (33.1ms)
+  Rendered topics/edit.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/topics/1" for 71.199.5.190 at 2017-05-16 19:56:48 +0000
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WvHcVeibkbeB5DrYV9fUxwM4Rl2nA0jieR9EFypqgcy/hsJk4VLce8bpCI5J8w6UoHFcwRAXbc/te6dBfvrTqg==", "topic"=>{"name"=>"Ewinv jhki vbnhelk lop vmpwdzhf ufeosdi pynbsgz.", "description"=>"", "public"=>"1"}, "commit"=>"Save", "id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered topics/_form.html.erb (5.7ms)
+  Rendered topics/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 69ms (Views: 63.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/topics/1" for 71.199.5.190 at 2017-05-16 19:57:03 +0000
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9zdb3T2OVg+5emO1VfopaEWm3GszyzGLkF7CCHM4zzMSQEXsNEcbw/53UeNL3vM75u/G94TfFKYEOiFeJ6idVQ==", "topic"=>{"name"=>"Ewinv jhki vbnhelk lop vmpwdzhf ufeosdi pynbsgz.", "description"=>"asfajfjafjasfjaklsdfjkalsjfk", "public"=>"0"}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered topics/_form.html.erb (2.4ms)
+  Rendered topics/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 47ms (Views: 43.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-16 19:59:01 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.5ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 36]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 52]]
+  Rendered topics/show.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 254ms (Views: 120.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/topics/1/edit" for 71.199.5.190 at 2017-05-16 19:59:03 +0000
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/_form.html.erb (5.6ms)
+  Rendered topics/edit.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 177ms (Views: 175.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/topics/1" for 71.199.5.190 at 2017-05-16 19:59:08 +0000
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6O3pC0LCCQCRXsGtZKKdOn5mRrapTyE4dZxqX7aSr84Nmvc6SwtEzNZT8/t6hkdp3S9cKh5bBBXh+IkJ4gL9qA==", "topic"=>{"name"=>"Ewinv jhki vbnhelk lop vmpwdzhf ufeosdi pynbsgz.", "description"=>"Hapbugkv lerpwcm pmetav virunedm paoxgezq gmudbknt cpjuvs.", "public"=>"0"}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered topics/_form.html.erb (3.8ms)
+  Rendered topics/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 103ms (Views: 97.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-16 20:02:56 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 36]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 52]]
+  Rendered topics/show.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 122ms (Views: 109.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/topics/1/edit" for 71.199.5.190 at 2017-05-16 20:02:58 +0000
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/_form.html.erb (2.3ms)
+  Rendered topics/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/topics/1" for 71.199.5.190 at 2017-05-16 20:03:01 +0000
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u0KYp9dhbfirB5vGXpy5bmHdBb9shT+F6LTzY5oPRNxeNYaW3qggNOwKqZBAuGM9wpQfI9uRGqh80BA1zp8Wug==", "topic"=>{"name"=>"Ewinv jhki vbnhelk lop vmpwdzhf ufeosdi pynbsgz.", "description"=>"Hapbugkv lerpwcm pmetav virunedm paoxgezq gmudbknt cpjuvs.", "public"=>"0"}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "topics" SET "public" = ?, "updated_at" = ? WHERE "topics"."id" = ?  [["public", "f"], ["updated_at", "2017-05-16 20:03:01.048869"], ["id", 1]]
+  [1m[36m (13.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-jessann.c9users.io/topics/1
+Completed 302 Found in 19ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/topics/1" for 71.199.5.190 at 2017-05-16 20:03:01 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 36]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 52]]
+  Rendered topics/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.8ms)
