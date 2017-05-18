@@ -3293,3 +3293,114 @@ Migrating to CreateUsers (20170516201225)
             FROM sqlite_temp_master
             WHERE name='index_posts_on_topic_id' AND type='index'
 
+  [1m[36m (6.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (8.6ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('john@john.com') LIMIT 1
+  [1m[36mSQL (41.3ms)[0m  [1mINSERT INTO "users" ("password_digest", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["password_digest", "$2a$10$AENoYYaql9uYjIB4zZGuEexjfQLS1N7LGOyCyZ/rZpHdRvEFQ/7dG"], ["name", "John"], ["email", "john@john.com"], ["created_at", "2017-05-18 01:52:25.729493"], ["updated_at", "2017-05-18 01:52:25.729493"]]
+  [1m[35m (11.9ms)[0m  commit transaction
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('test@test.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('test@t.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('test@t.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('test@t.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('test@t.com') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "t"], ["email", "test@t.com"], ["password_digest", "$2a$10$uRe9jtV0TYF4B7N9ZiMojOJLFkJvKDkEdZQuzSHioP7fTWcbefuqy"], ["created_at", "2017-05-18 01:59:23.771193"], ["updated_at", "2017-05-18 01:59:23.771193"]]
+  [1m[36m (15.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 50.73.33.174 at 2017-05-18 02:22:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2339ms (Views: 2329.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.73.33.174 at 2017-05-18 02:22:23 +0000
+
+
+Started GET "/assets/application.self-65251746be8958695a7b9801934e503d0890e9f9cf38709e414f0c182bcdb15b.css?body=1" for 50.73.33.174 at 2017-05-18 02:22:23 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.73.33.174 at 2017-05-18 02:22:23 +0000
+
+
+Started GET "/" for 50.73.33.174 at 2017-05-18 02:23:19 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.73.33.174 at 2017-05-18 02:24:17 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 73ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.73.33.174 at 2017-05-18 02:24:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 385ms (Views: 376.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.73.33.174 at 2017-05-18 02:24:44 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.73.33.174 at 2017-05-18 02:25:00 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 372ms (Views: 362.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.73.33.174 at 2017-05-18 02:25:38 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.73.33.174 at 2017-05-18 02:26:31 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 50.73.33.174 at 2017-05-18 02:27:18 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 132ms (Views: 118.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for 50.73.33.174 at 2017-05-18 02:28:29 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 50.73.33.174 at 2017-05-18 02:28:56 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BGivepHOPU335n0AIo4WBHrIke4OIScORDNZ+fyV5hXhH7FLmAdwgbDrT1Y8qsxX2YGLcrk1AiPQV7qvqAW0cw==", "user"=>{"name"=>"Jess", "email"=>"jess@jess.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jess@jess.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jess"], ["email", "jess@jess.com"], ["password_digest", "$2a$10$OslGCoSHdwlfbrtTel12tu/eNbz/gUMRBgNavv5lWEjBqllvt01de"], ["created_at", "2017-05-18 02:28:56.190862"], ["updated_at", "2017-05-18 02:28:56.190862"]]
+  [1m[36m (13.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-jessann.c9users.io/
+Completed 302 Found in 100ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/" for 50.73.33.174 at 2017-05-18 02:28:56 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.0ms)
