@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     resources :posts, except: [:index]
   end
   
+  # confirmation page for new users
+  post 'users/confirm' => "users#confirm"
+  
   get 'about' => 'welcome#about'
 
   root 'welcome#index'

@@ -3404,3 +3404,319 @@ Started GET "/" for 50.73.33.174 at 2017-05-18 02:28:56 +0000
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (4.3ms)
 Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.73.33.174 at 2017-05-18 02:44:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 629ms (Views: 614.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 50.73.33.174 at 2017-05-18 02:44:43 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (127.6ms)
+Completed 200 OK in 183ms (Views: 168.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/confirm" for 50.73.33.174 at 2017-05-18 02:44:57 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYYjbatu1iLqZINYiUPQERK1WbUliGwMLaSzhY2Q+3R08T1coqeb7q1psQ6XZwpCsfxDKZKcSSG5wFDT2QCpEg==", "user"=>{"name"=>"Jenna", "email"=>"jenna@j.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template users/confirm, application/confirm with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee]}. Searched in:
+  * "/home/ubuntu/workspace/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (44.0ms)
+
+
+Started POST "/users/confirm" for 50.73.33.174 at 2017-05-18 02:45:36 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tF2DCQlAvBgGbTYbP8LVAFaDdEGXZHZhN6FKWQjVZ+5RKp04AInx1EFgBE0h5g9T9cpu3SBwU0yjxakPXEU1iA==", "user"=>{"name"=>"Jenna", "email"=>"jenna@j.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendered users/confirm.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 145ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=tF2DCQlAvBgGbTYbP8LVAFaDdEGXZHZhN6FKWQjVZ%2B5RKp04AInx1EFgBE0h5g9T9cpu3SBwU0yjxakPXEU1iA%3D%3D&commit=Sign+up&controller=users&user%5Bemail%5D=jenna%40j.com&user%5Bname%5D=Jenna&user%5Bpassword%5D=[FILTERED]&user%5Bpassword_confirmation%5D=[FILTERED]&utf8=%E2%9C%93" for 50.73.33.174 at 2017-05-18 02:45:43 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"tF2DCQlAvBgGbTYbP8LVAFaDdEGXZHZhN6FKWQjVZ+5RKp04AInx1EFgBE0h5g9T9cpu3SBwU0yjxakPXEU1iA==", "commit"=>"Sign up", "user"=>{"email"=>"jenna@j.com", "name"=>"Jenna", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "utf8"=>"✓"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jenna@j.com') LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jenna"], ["email", "jenna@j.com"], ["password_digest", "$2a$10$akGXDKyytmVb0DZIvudr.OiC0mSe4rnJv8VeX6ERVXQlrejUJ5gYC"], ["created_at", "2017-05-18 02:45:43.932126"], ["updated_at", "2017-05-18 02:45:43.932126"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-jessann.c9users.io/
+Completed 302 Found in 156ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/" for 50.73.33.174 at 2017-05-18 02:45:44 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 50.73.33.174 at 2017-05-18 02:45:50 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/confirm" for 50.73.33.174 at 2017-05-18 02:46:03 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GPnGzuuGYFkiXBiHtXRalcBxs6MFkk0XTCBKs/YYF0X9jtj/4k8tlWVRKtGrUIDGYzipP7KGaDrYRKnloohFIw==", "user"=>{"name"=>"asfdjaklsdfjkl", "email"=>"asdjfklasdfjkalsdfj@gjgj.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendered users/confirm.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 116ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 50.73.33.174 at 2017-05-18 02:46:07 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-18 04:07:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 705ms (Views: 692.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 71.199.5.190 at 2017-05-18 04:07:46 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (171.1ms)
+Completed 200 OK in 248ms (Views: 233.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/confirm" for 71.199.5.190 at 2017-05-18 04:08:02 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9tK9zknk6A9asKDuFOayAzNq81XgFZrxn2GDE3Wa6JETpaP/QC2lwx29krgKwmhQkCPpyVcBv9wLBWBFIQq69w==", "user"=>{"name"=>"fjklfjklfj", "email"=>"fjkfljfk@jfjflkjf.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendered users/confirm.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 150ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirm" for 71.199.5.190 at 2017-05-18 04:08:38 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/confirm"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.9ms)
+
+
+Started GET "/users/confirm" for 71.199.5.190 at 2017-05-18 04:08:54 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/confirm"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.2ms)
+
+
+Started POST "/users/confirm" for 71.199.5.190 at 2017-05-18 04:09:09 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lT1Tmll1wRqCbwTJkaXqam4DPmBrzp5ANDoWtJrDLWhwSk2rULyM1sViNp+PgTA5zUok/Nzau22gXvXizlN/Dg==", "user"=>{"name"=>"fjklfjklfj", "email"=>"fjkfljfk@jfjflkjf.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendered users/confirm.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 107ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=lT1Tmll1wRqCbwTJkaXqam4DPmBrzp5ANDoWtJrDLWhwSk2rULyM1sViNp%2BPgTA5zUok%2FNzau22gXvXizlN%2FDg%3D%3D&commit=Sign+up&controller=users&user%5Bemail%5D=fjkfljfk%40jfjflkjf.com&user%5Bname%5D=fjklfjklfj&user%5Bpassword%5D=[FILTERED]&user%5Bpassword_confirmation%5D=[FILTERED]&utf8=%E2%9C%93" for 71.199.5.190 at 2017-05-18 04:09:12 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"lT1Tmll1wRqCbwTJkaXqam4DPmBrzp5ANDoWtJrDLWhwSk2rULyM1sViNp+PgTA5zUok/Nzau22gXvXizlN/Dg==", "commit"=>"Sign up", "user"=>{"email"=>"fjkfljfk@jfjflkjf.com", "name"=>"fjklfjklfj", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "utf8"=>"✓"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('fjkfljfk@jfjflkjf.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (68.8ms)
+Completed 200 OK in 203ms (Views: 113.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/confirm" for 71.199.5.190 at 2017-05-18 04:09:20 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YjOwgC9szXqwAPS5mjtSUk2dD6xOud1akbhuROLm7+qHRK6xJqWAtvcNxu+EH4gB7tQVMPmt+HcF3I0Stna9jA==", "user"=>{"name"=>"fjklfjklfj", "email"=>"fjkfljfk@jfjflkjf.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendered users/confirm.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 109ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=YjOwgC9szXqwAPS5mjtSUk2dD6xOud1akbhuROLm7%2BqHRK6xJqWAtvcNxu%2BEH4gB7tQVMPmt%2BHcF3I0Stna9jA%3D%3D&commit=Sign+up&controller=users&user%5Bemail%5D=fjkfljfk%40jfjflkjf.com&user%5Bname%5D=fjklfjklfj&user%5Bpassword%5D=[FILTERED]&user%5Bpassword_confirmation%5D=[FILTERED]&utf8=%E2%9C%93" for 71.199.5.190 at 2017-05-18 04:09:26 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"YjOwgC9szXqwAPS5mjtSUk2dD6xOud1akbhuROLm7+qHRK6xJqWAtvcNxu+EH4gB7tQVMPmt+HcF3I0Stna9jA==", "commit"=>"Sign up", "user"=>{"email"=>"fjkfljfk@jfjflkjf.com", "name"=>"fjklfjklfj", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "utf8"=>"✓"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('fjkfljfk@jfjflkjf.com') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "fjklfjklfj"], ["email", "fjkfljfk@jfjflkjf.com"], ["password_digest", "$2a$10$KGsugGv31B2HbCVmNyU1BO3vYgCCkhw9byE2kF84QceizPilkcciC"], ["created_at", "2017-05-18 04:09:26.934420"], ["updated_at", "2017-05-18 04:09:26.934420"]]
+  [1m[35m (12.5ms)[0m  commit transaction
+Redirected to https://bloccit-jessann.c9users.io/
+Completed 302 Found in 88ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-18 04:09:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 71.199.5.190 at 2017-05-18 04:09:31 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/confirm" for 71.199.5.190 at 2017-05-18 04:09:46 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qZ91Wd8bsqW8snCGuL9jDa7cn9C7+2H3oDl7FMRfCFhM6Gto1tL/afu/QtCmm7leDZWFTAzvRNo0XZhCkM9aPg==", "user"=>{"name"=>"fjfjfjfjf", "email"=>"fjfjfjfjf@fjfjfjf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendered users/confirm.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 136ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 71.199.5.190 at 2017-05-18 04:09:49 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.0ms)

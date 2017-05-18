@@ -1,0 +1,11 @@
+<h1>Sign Up Confirmation</h1>
+
+<p>Are you sure these values are correct?</p>
+
+<h2>Name: <%= @user.name %></h2>
+<h2>Email: <%= @user.email %></h2>
+
+<div class="row">
+    <%= button_to "Yes", {controller: "users", action: "create", params: params}, class: "btn btn-success" %>
+    <%= link_to "No", new_user_path, class: "btn btn-primary" %>
+</div>
