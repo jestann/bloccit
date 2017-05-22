@@ -7,13 +7,14 @@ RSpec.describe User, type: :model do
     
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_length_of(:name).is_at_least(1) }
-    
+    # I don't know how to write a regex text at present.
+
     # Shoulda tests for email
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_uniqueness_of(:email) }
     it { is_expected.to validate_length_of(:email).is_at_least(3) }
     it { is_expected.to allow_value("test@test.com").for(:email) }
-    # what does this last one mean?
+    # this last one tests a true positive. it should pass this example.
     
     # Shoulda tests for password
     it { is_expected.to validate_presence_of(:password) }
@@ -29,7 +30,9 @@ RSpec.describe User, type: :model do
     end
     
     describe "invalid user" do
-        # this tests a true negative. is the previous a true positive?
+        # this tests a true negative. it should not allow these examples.
+        # why the different style?
+        # is this just redundancy for the sake of being safe?
         
         let(:user_with_invalid_name) { User.new(name: "", email: "test@test.com") }
         let(:user_with_invalid_email) { User.new(name: "Test", email: "") }
@@ -41,8 +44,6 @@ RSpec.describe User, type: :model do
         it "should be an invalid user due to blank email" do
             expect(user_with_invalid_email).to_not be_valid
         end
-        
-        # is this just redundancy for the sake of being safe?
     end
     
 end

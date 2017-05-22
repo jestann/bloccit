@@ -3404,3 +3404,193 @@ Started GET "/" for 50.73.33.174 at 2017-05-18 02:28:56 +0000
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (4.3ms)
 Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-18 15:21:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 2620ms (Views: 2608.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/application.self-65251746be8958695a7b9801934e503d0890e9f9cf38709e414f0c182bcdb15b.css?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-05-18 15:21:06 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-05-18 15:21:07 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-05-18 15:21:07 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 71.199.5.190 at 2017-05-18 15:21:07 +0000
+
+
+Started GET "/topics" for 71.199.5.190 at 2017-05-18 15:21:12 +0000
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 69ms (Views: 57.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics/new" for 71.199.5.190 at 2017-05-18 15:21:15 +0000
+Processing by TopicsController#new as HTML
+  Rendered topics/_form.html.erb (27.2ms)
+  Rendered topics/new.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 85ms (Views: 84.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/topics" for 71.199.5.190 at 2017-05-18 15:21:23 +0000
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pjqy06CKuj1tlOT5TSE692RnPue1zzjQxgeDxHVLYZDbTaziqUP38SqZ1q9TBeCkxy4kewLbHf1SY2CSIdsz9g==", "topic"=>{"name"=>"asfjasfjaklsjklfj", "description"=>"asfjklsafjdklsfjksdl", "public"=>"0"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "topics" ("name", "description", "public", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "asfjasfjaklsjklfj"], ["description", "asfjklsafjdklsfjksdl"], ["public", "f"], ["created_at", "2017-05-18 15:21:23.537704"], ["updated_at", "2017-05-18 15:21:23.537704"]]
+  [1m[36m (12.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-jessann.c9users.io/topics/16
+Completed 302 Found in 22ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/topics/16" for 71.199.5.190 at 2017-05-18 15:21:23 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mTopic Load (0.4ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 16]]
+  Rendered topics/show.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 96ms (Views: 81.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-22 01:17:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 2264ms (Views: 2255.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-22 01:17:11 +0000
+
+
+Started GET "/assets/sessions.self-25b5eab7d6f9cc6e45c338276a1d780b8458fff0650035843d10061c1199c635.css?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/application.self-65251746be8958695a7b9801934e503d0890e9f9cf38709e414f0c182bcdb15b.css?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 71.199.5.190 at 2017-05-22 01:17:12 +0000
+
+
+Started GET "/sessions/new" for 71.199.5.190 at 2017-05-22 01:17:17 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (42.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for 71.199.5.190 at 2017-05-22 01:18:25 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 1888ms (Views: 1886.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-77fd5d9fb9d7a31d6efbb7bf053c9dab338865d765a6d79a11f73655b95ad0c6.css?body=1" for 71.199.5.190 at 2017-05-22 01:18:27 +0000
+
+
+Started GET "/sessions/new" for 71.199.5.190 at 2017-05-22 01:19:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (23.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 2147ms (Views: 2137.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sessions.self-40eeeed560edbdd2a9ace0f3a128cd48427b48bbea33e4fd7ffae1071045b88f.css?body=1" for 71.199.5.190 at 2017-05-22 01:19:50 +0000
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started POST "/sessions" for 71.199.5.190 at 2017-05-22 01:21:15 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RrnPtbaiAi3S6LJAkHnJ4MlLU1uuf9HZR51YPz0G3aKsOzmEGxdd5tfcc2t9H9oVwJm4XS5VD48XmvovP44YMg==", "session"=>{"email"=>"john@john.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "john@john.com"]]
+Redirected to https://bloccit-jessann.c9users.io/
+Completed 302 Found in 85ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-05-22 01:21:15 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.3ms)

@@ -80,13 +80,13 @@ RSpec.describe TopicsController, type: :controller do
             get :edit, {id: a_topic.id}
             
             # why not this?
-            # expect(assigns(:topic)).to eq(a_topic)
+            expect(assigns(:topic)).to eq(a_topic)
+            # since it's just checking assignment not updating
             
-            topic_instance = assigns(:topic)
-            expect(topic_instance.id).to eq a_topic.id
-            expect(topic_instance.name).to eq a_topic.name
-            expect(topic_instance.description).to eq a_topic.description
-            
+            # topic_instance = assigns(:topic)
+            # expect(topic_instance.id).to eq a_topic.id
+            # expect(topic_instance.name).to eq a_topic.name
+            # expect(topic_instance.description).to eq a_topic.description
             # why not this also?
             # expect(topic_instance.public).to eq a_topic.public
         end

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
+  resources :sessions, only: [:new, :create, :destroy]
 
   # this nests posts in topics, removes a posts #index view
   resources :topics do
