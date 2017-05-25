@@ -5,6 +5,7 @@
         <%= form_for :session, url: sessions_path do |f| %>
         <!-- so can form_for create an object "session" not just fill
         in values for it? -->
+        <!-- yes, this is just a name for collecting parameters -->
             <div class="form-group">
                 <%= f.label :email %>
                 <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Enter email" %>
