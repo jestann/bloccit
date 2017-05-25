@@ -6,8 +6,8 @@ class Post < ActiveRecord::Base
     
     default_scope { order('created_at DESC') }
     # scopes allow queries to be method calls
-    ordered_by_title
-    ordered_by_reverse_created_at
+    scope :ordered_by_title, -> { order('title') }
+    scope :ordered_by_reverse_created_at, -> { order('created_at') }
     
 
     validates :title, length: {minimum: 5}, presence: true

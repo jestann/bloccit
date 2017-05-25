@@ -4574,3 +4574,5 @@ Processing by PostsController#show as HTML
   Rendered posts/show.html.erb within layouts/application (3.3ms)
   [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
 Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.7ms)
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.7ms)[0m  SELECT  "posts".* FROM "posts"  ORDER BY created_at LIMIT 1
