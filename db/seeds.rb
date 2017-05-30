@@ -50,6 +50,20 @@ user.update_attributes!(
     password: 'testing'
 )
 
+User.create!(
+    name: 'Admin User',
+    email: 'admin@a.com',
+    password: 'testing',
+    role: 'admin'
+)
+
+User.create!(
+    name: 'Member User',
+    email: 'member@m.com',
+    password: 'testing',
+)
+    
+
 puts "Seed finished."
 puts "#{User.count} users created."
 puts "#{Topic.count} topics created."

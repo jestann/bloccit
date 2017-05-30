@@ -30,8 +30,50 @@ RSpec.describe User, type: :model do
             expect(user).to have_attributes(name: "Test", email: "test@test.com")
             # tests only name and email
         end
+        
+        it "responds to role" do
+            expect(user).to respond_to(:role)
+        end
+        
+        it "respondes to #admin?" do
+            expect(user).to respond_to(:admin?)
+        end
+        
+        it "responds to #member?" do
+            expect(user).to respond_to(:member?)
+        end
     end
     
+    describe "roles" do
+        it "is member by default" do
+            expect(user.role).to eql("member")
+        end
+        
+        context "member user" do
+            it "returns true for #member?" do
+                expect(user.member?).to be_truthy
+            end
+            
+            it "returns false for #admin?" do
+                expect(user.admin?).to be_falsey
+            end
+        end
+        
+        context "admin user" do
+            before do
+                user.admin!
+            end
+            
+            it "returns false for #member?" do
+                expect(user.member?).to be_falsey
+            end
+            
+            it "returns true for #admin?" do
+                expect(user.admin?).to be_truthy
+            end
+        end
+    end
+            
     describe "invalid user" do
         # this tests a true negative. it should not allow these examples.
         # why the different style?
