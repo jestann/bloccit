@@ -2,7 +2,8 @@ class PostsController < ApplicationController
   
   before_action :require_sign_in, except: :show
   # requires sign in for all actions but show
-  before_action :authorize_user, except: [:show, :new, :create]
+  before_action :allow_moderator, except: [:show, :new, :create, :destroy]
+  before_action :authorize_user, except: [:show, :new, :create, :edit, :update]
   
   def show
     @post = Post.find(params[:id])
@@ -86,6 +87,14 @@ class PostsController < ApplicationController
   # anything below is private, so add at bottom of file
   def post_params
     params.require(:post).permit(:title, :body)
+  end
+
+  def allow_moderator
+    post = Post.find(params[:id])
+    unless current_user == post.user || current_user.moderator? || current_user.admin?
+      flash[:alert] = "You must be an admin or a moderator to do that."
+      redirect_to [post.topic, post]
+    end
   end
   
   def authorize_user
