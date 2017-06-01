@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
         else
             flash[:alert] = "Comment failed to save."
             redirect_to [@post.topic, @post]
+            # needed an added redirect here
             # why not flash.now?
         end
     end

@@ -1,0 +1,13 @@
+<div class="media">
+    <div class="media-body">
+        <h4 class="media-heading">
+            <%= link_to post.title, topic_post_path(@topic, post) %>
+            <!-- changed from "post" to above route -->
+        </h4>
+        <small>
+            submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %> <br>
+            <%= post.comments.count %> Comments
+        </small>
+        <!-- created_at method exists -->
+    </div>
+</div>

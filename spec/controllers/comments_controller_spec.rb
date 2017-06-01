@@ -6,6 +6,9 @@ RSpec.describe CommentsController, type: :controller do
     let(:other_user) { User.create!(name: RandomData.random_name, email: RandomData.random_email, password: RandomData.random_password) }
     let(:topic) { Topic.create!(name: RandomData.random_sentence, description: RandomData.random_paragraph) }
     let(:post1) { topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: user) }
+    # cannot name this "post" as this creates a method called post that takes 0 arguments
+    # it doesn't actually create a variable, and this confuses rspec when it sees "post :create"
+    # it returns an error "too many arguments, should be 0 but is 2"
     let(:body) { RandomData.random_paragraph }
     let(:comment) { Comment.create!(body: body, post: post1, user: user) }
 
