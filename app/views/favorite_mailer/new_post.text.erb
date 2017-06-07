@@ -1,0 +1,9 @@
+New post created: "<%= @post.title %>"
+<%= "=" * (@post.title.length+12) %>
+
+<%= @post.body %>
+
+<%= "-" * (@post.title.length+12) %>
+You'll be notified of future comments on your post!
+
+Visit online at: <%= topic_post_url(@post.topic, @post) %>

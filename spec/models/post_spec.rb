@@ -7,7 +7,7 @@ RSpec.describe Post, type: :model do
   let(:body) { RandomData.random_paragraph }
   
   let(:topic) {Topic.create!(name: name, description: description) }
-  let(:user) {User.create!(name: "User", email: "test@testing.com", password: "helloworld") }
+  let(:user) {User.create!(name: RandomData.random_name, email: RandomData.random_email, password: RandomData.random_password) }
   let(:post) { topic.posts.create!(title: title, body: body, user: user) }
   
   it { is_expected.to belong_to(:topic) }
@@ -76,5 +76,20 @@ RSpec.describe Post, type: :model do
       end
     end
   end
+  
+  describe "#favorite_post" do
     
+    it "creates a favorite for current user when a post is created" do
+      new_post = topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: user)
+      expect(user.favorites.where(post: new_post).first).not_to be_nil
+    end
+    
+    it "sends an email to notify user of new favorite" do
+      new_post = topic.posts.new(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: user)
+      expect(FavoriteMailer).to receive(:new_post).with(user, new_post)
+      new_post.save!
+      # is it important to have this in reverse order like this?
+    end
+  end
+  
 end
