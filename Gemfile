@@ -4,6 +4,7 @@ source 'https://rubygems.org'
  gem 'rails', '4.2.5'
  gem 'bootstrap-sass'
  gem 'bcrypt' # encrypting user passwords
+ gem 'figaro', '1.0'
  
  group :production do
    gem 'pg'

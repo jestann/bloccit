@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
     # why is the way this is set up slightly diff in rails?
     has_many :comments, dependent: :destroy
     has_many :votes, dependent: :destroy
+    has_many :favorites, dependent: :destroy
     
     default_scope { order('rank DESC') }
     # scopes allow queiries to be method calls

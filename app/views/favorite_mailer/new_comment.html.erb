@@ -1,0 +1,24 @@
+<!-- this won't use the application.html.erb layout or CSS -->
+<!-- most mailer clients can't, so we use basic html -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content-"text/html; charset=UTF-8" http-equiv="Content-Type" />
+    </head>
+    <body>
+        <h1>New comment to "<%= @post.title %>"</h1>
+        <small>
+            By: <%= @comment.user.name %>
+        </small>
+        <p>
+            <%= @comment.body %>
+        </p>
+        <p>
+            <%= link_to "View Comment on site", topic_post_url(@post.topic, @post, anchor: "comment-#{@comment.id}") %>
+            <!-- can't use "paths" except within the site, _url generates a base url for it -->
+            <!-- anchors are a conventional way to jump to a particular id on the page -->
+            <!-- in this case this url "myapp.com/topics/3/posts/5#comment-21" would jump to #comment-21 (css ID) for instance -->
+        </p>
+    </body>
+</html>

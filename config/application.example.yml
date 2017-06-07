@@ -1,0 +1,6 @@
+SENDGRID_USERNAME:
+SENDGRID_PASSWORD:
+# this notes that we are storing these values as ENV variables
+# without listing the actual variables
+# actual application.yml should be added to .gitignore
+# and not pushed to GitHub

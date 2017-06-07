@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  # makes it possible to generate URLs in emails
+  config.action_mailer.defaul_url_options = { host: 'jess-bloccit-app.herokuapp.com' }
 end
