@@ -13,7 +13,7 @@ RSpec.describe CommentsController, type: :controller do
     # it returns an error "too many arguments, should be 0 but is 2"
 
     let(:body) { RandomData.random_paragraph }
-    let(:comment) { Comment.create!(body: body, post: post1, user: user) }
+    let(:comment) { create(:comment, user: user, post: post1) }
 
     context "guest" do
         describe "POST create" do

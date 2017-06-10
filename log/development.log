@@ -19897,3 +19897,273 @@ Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (0.2ms)
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
 Completed 200 OK in 46ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 172.56.39.56 at 2017-06-10 21:37:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 2034ms (Views: 2025.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.56.39.56 at 2017-06-10 21:37:17 +0000
+
+
+Started GET "/assets/application.self-c9db3c3ca00928dcb0f2ef6643cece9c59ffd8cefa39960d8f71ea2554964c74.css?body=1" for 172.56.39.56 at 2017-06-10 21:37:17 +0000
+
+
+Started GET "/sessions/new" for 172.56.39.56 at 2017-06-10 21:37:53 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (24.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 172.56.39.56 at 2017-06-10 21:38:00 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/NKO0S3b8LDrRiaANHRcBmCdNPHnNR7lWOlpsX3AZjg/EzCrINn8lTulRr3XGKo4Fb4EAVN7PcvDsxzeX9bEjA==", "session"=>{"email"=>"jessannbird@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jessannbird@gmail.com"]]
+Redirected to https://bloccit-jessann.c9users.io/
+Completed 302 Found in 81ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 172.56.39.56 at 2017-06-10 21:38:00 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+Completed 200 OK in 90ms (Views: 88.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/10" for 172.56.39.56 at 2017-06-10 21:38:04 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?  [["user_id", 10]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."user_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC  [["user_id", 10]]
+  Rendered collection (0.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 17]]
+  Rendered comments/_comment.html.erb (11.1ms)
+  [1m[36mFavorite Load (0.2ms)[0m  [1mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  ORDER BY "favorites"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  [["user_id", 10]]
+  Rendered favorites/_favorite.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (54.7ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 3.2ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/favorites/_favorite.html.erb:6: syntax error, unexpected ',', expecting ')'
+...orite.post.user.avatar_url(48), class: "gravatar" );@output_...
+...                               ^):
+  app/views/favorites/_favorite.html.erb:6: syntax error, unexpected ',', expecting ')'
+  app/views/users/show.html.erb:34:in `_app_views_users_show_html_erb__2489352350728820860_70160634639380'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.5ms)
+
+
+Started GET "/users/10" for 172.56.39.56 at 2017-06-10 21:38:59 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."user_id" = ?  [["user_id", 10]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."user_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC[0m  [["user_id", 10]]
+  Rendered collection (0.0ms)
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 17]]
+  Rendered comments/_comment.html.erb (1.9ms)
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  ORDER BY "favorites"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 17]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 17]]
+  Rendered favorites/_favorite.html.erb (17.7ms)
+  Rendered users/show.html.erb within layouts/application (26.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+Completed 200 OK in 205ms (Views: 201.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/10" for 172.56.39.56 at 2017-06-10 21:39:31 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?  [["user_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."user_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC  [["user_id", 10]]
+  Rendered collection (0.0ms)
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 17]]
+  Rendered comments/_comment.html.erb (1.8ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  ORDER BY "favorites"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 17]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 17]]
+  Rendered favorites/_favorite.html.erb (4.5ms)
+  Rendered users/show.html.erb within layouts/application (12.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+Completed 200 OK in 220ms (Views: 216.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/10" for 172.56.39.56 at 2017-06-10 21:39:49 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."user_id" = ?  [["user_id", 10]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."user_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC[0m  [["user_id", 10]]
+  Rendered collection (0.0ms)
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 17]]
+  Rendered comments/_comment.html.erb (2.0ms)
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  ORDER BY "favorites"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 17]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 17]]
+  Rendered favorites/_favorite.html.erb (4.1ms)
+  Rendered users/show.html.erb within layouts/application (13.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+Completed 200 OK in 224ms (Views: 220.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/10" for 172.56.39.56 at 2017-06-10 21:40:30 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?  [["user_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."user_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC  [["user_id", 10]]
+  Rendered collection (0.0ms)
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 17]]
+  Rendered comments/_comment.html.erb (2.0ms)
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  ORDER BY "favorites"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 17]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 17]]
+  Rendered favorites/_favorite.html.erb (5.8ms)
+  Rendered users/show.html.erb within layouts/application (21.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/10" for 172.56.39.56 at 2017-06-10 21:44:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?  [["user_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mComment Load (1.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."user_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 17]]
+  Rendered comments/_comment.html.erb (12.9ms)
+  [1m[35mFavorite Load (1.2ms)[0m  SELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  ORDER BY "favorites"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 17]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  [1m[35m (2.0ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 17]]
+  Rendered favorites/_favorite.html.erb (19.3ms)
+  Rendered users/show.html.erb within layouts/application (61.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+Completed 200 OK in 633ms (Views: 569.1ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/users/10" for 172.56.39.56 at 2017-06-10 21:46:35 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?  [["user_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC LIMIT 1  [["user_id", 10]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."user_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 17]]
+  Rendered comments/_comment.html.erb (3.2ms)
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  ORDER BY "favorites"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 17]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 17]]
+  Rendered favorites/_favorite.html.erb (159.0ms)
+  Rendered users/show.html.erb within layouts/application (175.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+Completed 200 OK in 255ms (Views: 250.2ms | ActiveRecord: 1.5ms)

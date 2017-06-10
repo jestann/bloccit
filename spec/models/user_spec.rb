@@ -123,4 +123,46 @@ RSpec.describe User, type: :model do
         end
     end
     
+    describe "#has_posts?" do
+        let(:user2) { create(:user) }
+        let(:topic) { create(:topic) }
+
+        it "returns true if user has posts" do
+            user2.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, topic: topic) 
+            expect(user2.has_posts?).to be true
+        end
+
+        it "returns false if user has no posts" do
+           expect(user2.has_posts?).to be false
+       end
+    end
+
+    describe "#has_comments?" do
+        let(:user2) { create(:user) }
+        let(:post1) { create(:post) }
+        
+        it "returns true if user has comments" do
+            user2.comments.create!(body: RandomData.random_paragraph, post: post1)
+            expect(user2.has_comments?).to be true
+        end
+        
+        it "returns nil if user has no posts or comments" do
+           expect(user2.has_comments?).to be false
+       end
+    end
+
+    describe "#has_favorites?" do
+        let(:user2) { create(:user) }
+        let(:post1) { create(:post) }
+        
+        it "returns true if user has favorites" do
+            user2.favorites.create!(post: post1) 
+            expect(user2.has_favorites?).to be true
+        end
+        
+        it "returns false if user has no favorites" do
+           expect(user2.has_favorites?).to be false
+       end
+    end
+    
 end
