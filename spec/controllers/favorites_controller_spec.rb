@@ -2,10 +2,10 @@ require 'rails_helper'
 include SessionsHelper
 
 RSpec.describe FavoritesController, type: :controller do
-    let(:user) { User.create!(name: RandomData.random_name, email: RandomData.random_email, password: RandomData.random_password) }
-    let(:topic) { Topic.create!(name: RandomData.random_sentence, description: RandomData.random_paragraph) }
-    let(:post1) { topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: user) }
-    
+    let(:user) { create(:user) }
+    let(:topic) { create(:topic) }
+    let(:post1) { create(:post, topic: topic, user: user) }
+
     context 'guest user' do
         describe 'POST create' do
             it 'redirects to the sign in view' do

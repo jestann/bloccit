@@ -6,11 +6,10 @@ RSpec.describe PostsController, type: :controller do
   let(:title) { RandomData.random_sentence }
   let(:body) { RandomData.random_paragraph }
 
-  let(:a_topic) { Topic.create!(name: RandomData.random_sentence, description: RandomData.random_paragraph) }
-  let(:user) { User.create!(name: "Bloc", email: "c@c.com", password: "password") }
-  let(:other_user) { User.create!(name: RandomData.random_name, email: RandomData.random_email, password: RandomData.random_password) }
-  let(:my_post) { a_topic.posts.create!(title: title, body: body, user: user) }
-
+  let(:a_topic) { create(:topic) }
+  let(:user) { create(:user) }
+  let(:other_user) { create(:user) }
+  let(:my_post) { create(:post, topic: a_topic, user: user) }
   # no longer need an index view, displayed on topic's show view
 
   context "guest" do

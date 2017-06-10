@@ -21,5 +21,11 @@ class UsersController < ApplicationController
             render :new
         end
     end
+    
+    def show
+        @user = User.find(params[:id])
+        @posts = @user.posts.visible_to(current_user)
+        # this scopes posts to only show public topic posts if the user isn't signed in
+    end
 
 end

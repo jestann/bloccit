@@ -1,15 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:name) { RandomData.random_sentence }
-  let(:description) { RandomData.random_paragraph }
-  let(:title) { RandomData.random_sentence }
-  let(:body) { RandomData.random_paragraph }
-  
-  let(:topic) {Topic.create!(name: name, description: description) }
-  let(:user) {User.create!(name: "User", email: "test@testing.com", password: "helloworld") }
-  let(:post) { topic.posts.create!(title: title, body: body, user: user) }
-  
+  let(:topic) { create(:topic) }
+  let(:user) { create(:user) }
+  let(:post) { create(:post) }
+
   it { is_expected.to belong_to(:topic) }
   it { is_expected.to belong_to(:user) }
   it { is_expected.to have_many(:comments) }
@@ -24,10 +19,11 @@ RSpec.describe Post, type: :model do
   it { is_expected.to validate_length_of(:title).is_at_least(5) }
   it { is_expected.to validate_length_of(:body).is_at_least(20) }
 
-  # but we still need this one that tests for presence also?
+  # but we still need this one that tests for specific presence also?
+  # should it also test for user?
   describe "attributes" do
     it "has title, body, user attributes" do
-        expect(post).to have_attributes(title: title, body: body, user: user)
+        expect(post).to have_attributes(title: post.title, body: post.body)
     end
   end
   

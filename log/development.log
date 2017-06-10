@@ -19804,3 +19804,96 @@ Processing by PostsController#show as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
 Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 172.56.39.56 at 2017-06-10 19:00:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+Completed 200 OK in 2338ms (Views: 2328.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.56.39.56 at 2017-06-10 19:00:48 +0000
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.56.39.56 at 2017-06-10 19:00:48 +0000
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.56.39.56 at 2017-06-10 19:00:48 +0000
+
+
+Started GET "/assets/sessions.self-40eeeed560edbdd2a9ace0f3a128cd48427b48bbea33e4fd7ffae1071045b88f.css?body=1" for 172.56.39.56 at 2017-06-10 19:00:48 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/votes.self-e71113ee8cc099c69734c99b89de97faee11826e76c8baccc53b58d306606025.css?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/users.self-d7a625f7b318e644b8398386f80b1a035a5e861afe23f375f6a41d928c91981e.css?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/application.self-65251746be8958695a7b9801934e503d0890e9f9cf38709e414f0c182bcdb15b.css?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/favorites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:49 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:50 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:50 +0000
+
+
+Started GET "/assets/votes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:50 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:50 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 172.56.39.56 at 2017-06-10 19:00:50 +0000
+
+
+Started DELETE "/sessions/10" for 172.56.39.56 at 2017-06-10 19:01:04 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DZBxHTCeO539d2UDvFnr/yQv/sIFQxqF2OKH0jY6WPHOUc9nPZw3uC2UBT5fNR3BUQzOMrENOatDuPK9FCz6RQ==", "id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+Redirected to https://bloccit-jessann.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 172.56.39.56 at 2017-06-10 19:01:05 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 46ms (Views: 45.8ms | ActiveRecord: 0.2ms)

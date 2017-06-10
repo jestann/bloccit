@@ -8,6 +8,11 @@ class Post < ActiveRecord::Base
     
     default_scope { order('rank DESC') }
     # scopes allow queiries to be method calls
+    scope :visible_to, -> (user) { user ? all : joins(:topic).where('topics.public' => true) }
+    # this uses a lambda "->" to ensure a user is signed in
+    # if a user is present, return all
+    # if not we use ActiveRecord joins to retrieve all posts from public topics
+    # this query uses a SQL inner join to query a collection's relations in one query
 
     validates :title, length: {minimum: 5}, presence: true
     validates :body, length: {minimum: 20}, presence: true
