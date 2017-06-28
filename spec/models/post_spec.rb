@@ -22,7 +22,7 @@ RSpec.describe Post, type: :model do
   # but we still need this one that tests for specific presence also?
   # should it also test for user?
   describe "attributes" do
-    it "has title, body, user attributes" do
+    it "has title, body attributes" do
         expect(post).to have_attributes(title: post.title, body: post.body)
     end
   end
