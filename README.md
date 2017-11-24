@@ -37,7 +37,7 @@ $ rails s
 
 ### Configuration Variables
 
-**Note:** This repository uses the file `application.yml` to initialize SendGrid, which is not included in this repository.
+**Note:** This repository uses the file `application.yml` to initialize SendGrid. This file is not included in the repository.
 
 To run this app, developers must create a `application.yml` file with the appropriate information as given in `application.example.yml`:
 
