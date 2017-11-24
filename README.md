@@ -1,6 +1,7 @@
 # Rereadit
 
-*A Reddit clone on Rails inspired by the political clout of the original.* 
+A Reddit clone on Rails inspired by the political clout of the original.
+
 Rereadit features topics, posts, commenting, favoriting, voting, and email subscription.
 
 #### Build Frameworks
@@ -47,15 +48,15 @@ SENDGRID_USERNAME:
 SENDGRID_PASSWORD:
 ```
 
-#### Database Seeding
+### Database Seeding
 
 This app includes a Ruby class in `random_data.rb` for generating effective test data and seeding the database via `seeds.rb`.
 
-#### Testing
+### Testing
 
 This app includes a thorough set of tests using `rspec` in the `spec` directory.
 
-#### File Structure
+### File Structure
 
 This app follows the standard Rails file structure.
 
@@ -97,17 +98,17 @@ This app follows the standard Rails file structure.
 ├── config.ru
 ├── Gemfile
 ├── Rakefile
-└── Readme.md
+└── README.md
 ```
 
 ### Future Features
 
 - Improve visual design of all features.
 
-#### Implementation
+### Implementation
 
 A test-drive version of the app exists [here](https://jestann-rereadit.herokuapp.com).
 
-#### Case Study
+### Case Study
 
 A description of the project case study exists [here](http://jessbird.me/portfolio/rereadit.html).
