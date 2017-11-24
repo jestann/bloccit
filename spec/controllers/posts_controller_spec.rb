@@ -131,7 +131,7 @@ RSpec.describe PostsController, type: :controller do
     describe "GET #edit" do
       it "returns http redirect" do
         get :edit, topic_id: a_topic.id, id: my_post.id
-        expect(response).to redirect_to([a_topic, my_post])
+        expect(response).to redirect_to [a_topic, my_post]
       end
     end
     
