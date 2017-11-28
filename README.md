@@ -111,15 +111,14 @@ A description of the project case study exists [here](http://jessbird.me/portfol
 
 #### Main
 
-![rereadit home 1](app/assets/images/readme/front-1.png){:width="50%"}
+<img alt="rereadit home 1" src="app/assets/images/readme/front-1.png" width="50%">
 
-![rereadit home 2](app/assets/images/readme/front-2.png){:width="50%"}
+<img alt="rereadit home 2" src="app/assets/images/readme/front-2.png" width="50%">
 
 #### Topic
 
-![rereadit topic](app/assets/images/readme/topic.png){:width="80%"}
+<img alt="rereadit topic" src="app/assets/images/readme/topic.png" width="50%">
 
 #### Post
 
-![rereadit post](app/assets/images/readme/post.png){:width="60%"}
-
+<img alt="rereadit post" src="app/assets/images/readme/post.png" width="50%">
