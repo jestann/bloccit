@@ -1,18 +1,11 @@
-<h1>New Topic</h1>
- 
+<div class="container main">
+ <h1>New Topic</h1>
  <div class="row">
-     
-   <div class="col-md-4">
-     <p>Guidelines for topics:</p>
-     <ul>
-       <li>Make sure the topic is appropriate.</li>
-       <li>Never insult dogs.</li>
-       <li>Smile while you type.</li>
-     </ul>
-   </div>
-   
    <div class="col-md-8">
      <%= render partial: 'form', locals: { topic: @topic } %>
    </div>
-   
  </div>
+ <div class="col-md-4 pull-right">
+  <%= image_tag image_path("moss.jpg"), class: "small-img" %>
+ </div>
+</div>

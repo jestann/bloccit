@@ -1,7 +1,6 @@
-<h2>Sign up</h2>
-
-<div class="row">
+<div class="container form">
     <div class="col-md-8">
+        <h2>Sign up</h2>
         <%= form_for @user do |f| %>
             <% if @user.errors.any? %>
                 <div class="alert alert-danger">
@@ -15,8 +14,7 @@
             <% end %>
             <%= form_group_tag(@user.errors[:name]) do %>
                 <%= f.label :name %>
-                <br>
-                <%= f.text_field :name, autofocus: true, class: 'form control', placeholder: "Enter name" %>
+                <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: "Enter name" %>
             <% end %>
             <%= form_group_tag(@user.errors[:email]) do %>
                 <%= f.label :email %>
@@ -34,5 +32,8 @@
                 <%= f.submit "Sign up", class: 'btn btn-success' %>
             </div>
         <% end %>
+    </div>
+    <div class="col-md-4 pull-right">
+        <%= image_tag image_path("moss.jpg"), class: "small-img" %>
     </div>
 </div>

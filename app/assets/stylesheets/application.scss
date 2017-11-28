@@ -17,19 +17,164 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.red {
-    background-color: red;
+/* Variables */
+
+$dark-navy: #010121;
+$dark-grey: #444;
+$medium-grey: #999;
+$light-grey: #dcdcdf;
+$green: #05a450;
+$red: #de282b;
+
+/* Overall Styling */
+
+body {
+    background-color: $dark-navy;
+    color: white;
+}
+
+.alert {
+    background-color: $red;
+    color: white;
+}
+
+.alert-success {
+    background-color: $green;
+    color: white;
+}
+
+.alert-failure {
+    background-color: $red;
+    color: white;
+}
+
+/* Navbar Styling */
+
+.nav {
+    border: none;
+    margin-top: 5px;
+}
+
+.nav-tabs {
+    border: none;
+}
+
+.nav-tabs li {
+    border-radius: 7px;
+    border: none;
+}
+
+.nav-tabs li:hover {
+    border: none;
+    border-radius: 7px;
+    background-color: $light-grey;
 }
 
 .user-info {
     margin-top: 9px;
 }
 
-.nav {
-    margin-top: 5px;
-}
-
 .gravatar {
     margin-bottom: 5px;
     margin-right: 5px;
+}
+
+/* Content Styling */
+
+.jumboton h1 {
+    color: $dark-navy;
+}
+
+.jumbotron img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.main {
+    background-color: $light-grey;
+    border-radius: 7px;
+    color: $dark-grey;
+    font-family: serif;
+    margin-bottom: 4%;
+}
+
+.main h1 {
+    color: $dark-navy;
+}
+
+.third {
+    height: 250px;
+    width: 28%;
+    padding: 10px 30px;
+    margin: -1% 2.5%;
+    margin-bottom: 4%;
+}
+
+.list {
+    padding: 2% 4%;
+}
+
+.list-item {
+    padding: 2%;
+}
+
+.small-img {
+    width: 80%;
+    border-radius: 7px;
+    margin: 5% 0%;
+}
+
+.medium-img {
+    width: 100%;
+    border-radius: 7px;
+    margin-top: 13%;
+}
+
+.small-text {
+    padding: 1%;
+}
+
+.button {
+    display: inline-block;
+    padding-right: 2%;
+    margin-bottom: 8%;
+}
+
+.favorite-img {
+    display: inline-block;
+    align: top;
+}
+
+.favorite-text {
+    display: inline-block;
+}
+
+/* Form Styling */
+
+.form {
+    font-family: serif;
+    width: 100%;
+    padding: 5% 5%;
+    background-color: $light-grey;
+    border-radius: 7px;
+}
+
+.comment {
+    padding: 0%;
+}
+
+.form h2 {
+    color: $dark-navy;
+    font-weight: bold;
+}
+
+.form-group {
+    width: 75%;
+    color: $dark-grey;
+}
+
+.form input, .form textarea {
+    border: none;
+    background-color: $medium-grey;
+    color: $light-grey;
 }

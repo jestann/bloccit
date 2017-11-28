@@ -1,20 +1,18 @@
-<h1><%= @topic.name %></h1>
-
-<% if user_is_authorized_for_topics? %>
-    <%= link_to "Edit Topic", edit_topic_path, class: 'btn btn-success' %>
-    <%= link_to "Delete Topic", @topic, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this topic?'} %>
-    <!-- there is no delete_topic_path, so... @topic, method: ? -->
-<% end %>
-
-<div class="row">
-    <div class="col-md-8">
+<div class="container main list">
+    <div class="col-md-7">
+        <h1><%= @topic.name %></h1>
         <p class="lead">
             <%= @topic.description %>
         </p>
         <%= render @topic.posts %>
     </div>
-    
-    <div class="col-md-4">
+    <div class="col-md-4 pull-right">
+        <%= image_tag image_path("moss.jpg"), class: "small-img" %>
+        <% if user_is_authorized_for_topics? %>
+            <%= link_to "Edit Topic", edit_topic_path, class: 'btn btn-success' %>
+            <%= link_to "Delete Topic", @topic, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this topic?'} %>
+            <!-- there is no delete_topic_path, so... @topic, method: ? -->
+        <% end %>
         <%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-success' %>
         <!-- changed link above from new_post_path to new_topic_post_path -->
         <!-- didn't need delete topic button twice -->

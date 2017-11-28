@@ -1,7 +1,6 @@
-<h2>Sign In</h2>
-
-<div class="row">
-    <div class="col md-8">
+<div class="container form">
+    <div class="col-md-8">
+        <h2>Sign In</h2>
         <%= form_for :session, url: sessions_path do |f| %>
         <!-- so can form_for create an object "session" not just fill
         in values for it? -->
@@ -22,5 +21,8 @@
                 <%= f.submit "Sign in", class: 'btn btn-success' %>
             </div>
         <% end %>
+    </div>
+    <div class="col-md-4 pull-right">
+        <%= image_tag image_path("moss.jpg"), class: "small-img" %>
     </div>
 </div>

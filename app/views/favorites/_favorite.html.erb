@@ -1,19 +1,13 @@
-<div class="media">
-    <div class="media-body">
-        <h4 class="media-heading">
-            <%= link_to favorite.post.title, topic_post_path(favorite.post.topic, favorite.post) %>
-        </h4>
-        <div class="pull-right">
-            <%= image_tag favorite.post.user.avatar_url(48), class: "gravatar" %>
-            <div class="pull-right">
-                <small>
-                    submitted <%= time_ago_in_words(favorite.post.created_at) %> ago by <%= favorite.post.user.name %> 
-                    <br>
-                    <%= pluralize(favorite.post.comments.count, "comment") %>
-                    <br>
-                    <%= pluralize(favorite.post.points, "vote") %>
-                </small>
-            </div>
+<div class="media-body">
+    <div class="favorite">
+        <div class="favorite-img">
+            <%= image_tag favorite.post.user.avatar_url(75), class: "gravatar" %>
+        </div>
+        <div class="favorite-text">
+            <h4><%= link_to favorite.post.title, topic_post_path(favorite.post.topic, favorite.post) %></h4>
+            submitted <%= time_ago_in_words(favorite.post.created_at) %> ago by <%= favorite.post.user.name %> |  
+            <%= pluralize(favorite.post.comments.count, "comment") %> | 
+            <%= pluralize(favorite.post.points, "vote") %>
         </div>
     </div>
 </div>

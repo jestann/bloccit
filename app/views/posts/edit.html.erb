@@ -1,16 +1,10 @@
-<h1>Edit Post</h1>
-
-<div class="row">
-    <div class="col-md-4">
-        <p>Guidelines for posts</p>
-        <ul>
-            <li>Make sure it rhymes.</li>
-            <li>Don't use the letter 'A'.</li>
-            <li>The incessant use of hashtags will get you banned.</li>
-        </ul>
-    </div>
+<div class="container main form">
     <div class="col-md-8">
+        <h1>Edit Post</h1>
         <%= render partial: 'form', locals: { topic: @post.topic, post: @post } %>
         <!--- this one works fine as @post.topic, new had to be @topic -->
+    </div>
+    <div class="col-md-4 pull-right">
+        <%= image_tag image_path("moss.jpg"), class: "medium-img" %>
     </div>
 </div>
