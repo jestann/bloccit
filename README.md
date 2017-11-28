@@ -111,15 +111,15 @@ A description of the project case study exists [here](http://jessbird.me/portfol
 
 #### Main
 
-![rereadit home 1](app/assets/images/readme/front-1.jpg)
+![rereadit home 1](app/assets/images/readme/front-1.png)
 
-![rereadit home 2](app/assets/images/readme/front-2.jpg)
+![rereadit home 2](app/assets/images/readme/front-2.png)
 
 #### Topic
 
-![rereadit topic](app/assets/images/readme/topic.jpg)
+![rereadit topic](app/assets/images/readme/topic.png)
 
 #### Post
 
-![rereadit post](app/assets/images/readme/post.jpg)
+![rereadit post](app/assets/images/readme/post.png)
 
