@@ -99,10 +99,6 @@ This app follows the standard Rails file structure.
 └── README.md
 ```
 
-### Future Features
-
-- Improve visual design of all features.
-
 ### Implementation
 
 A test-drive version of the app exists [here](https://jestann-rereadit.herokuapp.com).
