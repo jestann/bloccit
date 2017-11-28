@@ -106,3 +106,20 @@ A test-drive version of the app exists [here](https://jestann-rereadit.herokuapp
 ### Case Study
 
 A description of the project case study exists [here](http://jessbird.me/portfolio/rereadit.html).
+
+### Visuals
+
+#### Main
+
+![rereadit home 1](app/assets/images/readme/front-1.jpg?raw=true "Rereadit Home 1")
+
+![rereadit home 2](/app/assets/images/readme/front-2.jpg?raw=true "Rereadit Home 2")
+
+#### Topic
+
+![rereadit topic](./app/assets/images/readme/topic.jpg?raw=true "Rereadit Topic Example")
+
+#### Post
+
+![rereadit post](./app/assets/images/readme/post.jpg?raw=true "Rereadit Post Example")
+
