@@ -12,7 +12,7 @@ class UsersController < ApplicationController
         @user.password_confirmation = params[:user][:password_confirmation]
         
         if @user.save
-            flash[:notice] = "Welcome to Bloccit #{@user.name}!"
+            flash[:notice] = "Welcome to Rereadit #{@user.name}!"
             create_session(@user)
             # why this order?
             redirect_to root_path
