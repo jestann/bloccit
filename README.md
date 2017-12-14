@@ -103,10 +103,6 @@ This app follows the standard Rails file structure.
 
 A test-drive version of the app exists [here](https://jestann-rereadit.herokuapp.com).
 
-### Case Study
-
-A description of the project case study exists [here](http://jessbird.me/portfolio/rereadit.html).
-
 ### Visuals
 
 #### Main
