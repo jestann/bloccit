@@ -103,13 +103,18 @@ body {
 }
 
 .third {
-    height: 250px;
-    width: 28%;
+    min-width: 28%;
     padding: 10px 30px;
     margin: -1% 2.5%;
     margin-bottom: 4%;
 }
 
+@media(min-width:1000px) {
+    .third {
+        min-height: 250px;
+    }
+}    
+    
 .list {
     padding: 2% 4%;
 }

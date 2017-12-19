@@ -28883,3 +28883,148 @@ Processing by UsersController#show as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 301ms (Views: 292.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-12-19 05:29:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2577.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 2739ms (Views: 2730.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/favorites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/sessions.self-40eeeed560edbdd2a9ace0f3a128cd48427b48bbea33e4fd7ffae1071045b88f.css?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/votes.self-e71113ee8cc099c69734c99b89de97faee11826e76c8baccc53b58d306606025.css?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/application.self-d466500e8ceca0cdcab2d2fbda8ccbf0f8f47b6bd292428965abf52440bcb56d.css?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/favorites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:51 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:52 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:52 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:52 +0000
+
+
+Started GET "/assets/votes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:52 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:52 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 71.199.5.190 at 2017-12-19 05:29:52 +0000
+
+
+Started GET "/assets/city-44b750612d9905fad759f781a7b5375e81c925ed264509331738ed505ba08fa4.jpg" for 71.199.5.190 at 2017-12-19 05:29:52 +0000
+
+
+Started GET "/" for 71.199.5.190 at 2017-12-19 05:31:09 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 2113ms (Views: 2111.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-5b86e18659aee4a964d5c69280dea5e5f184b86440afa3c7db7603f3959a4628.css?body=1" for 71.199.5.190 at 2017-12-19 05:31:11 +0000
+
+
+Started GET "/" for 71.199.5.190 at 2017-12-19 05:32:18 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-12-19 05:32:53 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-12-19 05:33:26 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 84ms (Views: 82.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-12-19 05:33:55 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 67ms (Views: 65.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 71.199.5.190 at 2017-12-19 05:34:39 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 1861ms (Views: 1859.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-4bdf8772aa61a12e05a2bb99da7abfa3ea15e62f40a63098e6f94f9f7c5940de.css?body=1" for 71.199.5.190 at 2017-12-19 05:34:41 +0000
+
+
+Started GET "/" for 71.199.5.190 at 2017-12-19 05:36:45 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 2047ms (Views: 2045.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-ab5621b002e1ec647a8a7e316e01e0af301bc3752edec636375509d43b4533cc.css?body=1" for 71.199.5.190 at 2017-12-19 05:36:47 +0000
+
+
+Started GET "/" for 71.199.5.190 at 2017-12-19 05:37:06 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 1807ms (Views: 1805.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-98af6351b70d6774ee45a08391baf809343a1fc42b9f8a2beab8c333e990f9d1.css?body=1" for 71.199.5.190 at 2017-12-19 05:37:08 +0000
