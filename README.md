@@ -1,6 +1,6 @@
 # Rereadit
 
-A Reddit clone on Rails inspired by the political clout of the original. Rereadit features topics, posts, commenting, favoriting, voting, and email subscription.
+A discussion-based social media experience featuring topics, posts, commenting, favoriting, voting, and email subscription.
 
 #### Build Frameworks
 
